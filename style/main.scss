@@ -1,0 +1,88 @@
+@import 'abstracts/variables';
+
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/projects';
+@import 'layout/contact';
+@import 'layout/footer';
+@import 'layout/skills';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    scroll-behavior: smooth;
+	min-height: 100%;
+	background: $primary-color;
+	font-family: $font;
+	color: $font-color;
+	margin: 0;
+}
+
+.page {
+	min-height: 100vh;
+	animation: fadein 0.6s;
+}
+
+.center {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.top-arrow {
+	opacity: 0;
+	height: 7vh;
+	width: 7vh;
+	border-radius: 50%;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 90px;
+	right: 15px;
+	box-shadow: 0 0 10px 10px $primary-color;
+	transition: opacity 0.3s ease-out;
+	color: $primary-color;
+}
+
+.show-arrow {
+	opacity: 0.6;
+	transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+	cursor: pointer;
+	background: $decoration-color;
+
+	&:hover {
+		opacity: 1;
+		color: $font-color;
+	}
+}
+
+.push {
+	height: 80px;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
