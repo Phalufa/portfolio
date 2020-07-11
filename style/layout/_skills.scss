@@ -11,19 +11,27 @@ section {
 			background: $accent-color;
 			list-style: none;
 			box-shadow: 5px 5px 0 1px $decoration-color;
-            width: 165px;
-            height: 58px;
+			width: 165px;
+			height: 58px;
 			cursor: default;
 			margin: 1em 2em;
 			padding: 0.8em 1em;
 			flex-basis: 1;
 			transition: box-shadow 0.4s ease-in-out;
 			display: flex;
-            justify-content: space-between;
+			justify-content: space-between;
 			align-items: center;
 
 			&:hover {
 				box-shadow: 5px 5px 0 1px white;
+			}
+
+			.spring-io-32 {
+				background-image: url('../images/springio.png');
+				background-size: cover;
+				display: inline-block;
+				width: 32px;
+				height: 32px;
 			}
 		}
 	}
@@ -39,12 +47,4 @@ section {
 
 .devicon-mysql-plain {
 	font-size: 2em;
-}
-
-.spring-io-32 {
-	background-image: url('/images/springio.png');
-	background-size: cover;
-	display: inline-block;
-	width: 32px;
-	height: 32px;
 }
