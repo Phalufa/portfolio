@@ -257,7 +257,7 @@ section .skills .skill:hover {
 }
 
 section .skills .skill .spring-io-32 {
-  background-image: url("../portfolio/images/springio.png");
+  background-image: url("../images/springio.png");
   background-size: cover;
   display: inline-block;
   width: 32px;
