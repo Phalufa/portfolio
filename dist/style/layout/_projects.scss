@@ -1,0 +1,22 @@
+.heading {
+	display: flex;
+	justify-content: center;
+
+	h2 {
+		display: block;
+		color: $font-color;
+		border-bottom: 4px solid $decoration-color;
+		width: 30%;
+		line-height: 1.8em;
+		animation: border-width 0.7s ease-in;
+	}
+
+	.rotate {
+		transform: rotate(180deg);
+		opacity: 0.05;
+	}
+
+	.align-right {
+		text-align: right;
+	}
+}
