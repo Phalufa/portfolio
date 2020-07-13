@@ -3,5 +3,5 @@ import { showTopArrow } from "./top.js"
 
 window.addEventListener('scroll', (event) => {
     animateFooter();    // display footer with animation
-    showTopArrow(); // display "go top" arrow
+    showTopArrow(); // display top navigation arrow
 })

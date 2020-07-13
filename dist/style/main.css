@@ -111,6 +111,15 @@ article ul li {
   -webkit-box-shadow: 5px 5px 0 1px #2feba3;
           box-shadow: 5px 5px 0 1px #2feba3;
   margin: 0 2em 5em 2em;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+article ul li:hover {
+  -webkit-box-shadow: 5px 5px 0 1px #f0f0f0;
+          box-shadow: 5px 5px 0 1px #f0f0f0;
 }
 
 article ul li div {
@@ -327,8 +336,8 @@ section .skills .skill {
 }
 
 section .skills .skill:hover {
-  -webkit-box-shadow: 5px 5px 0 1px white;
-          box-shadow: 5px 5px 0 1px white;
+  -webkit-box-shadow: 5px 5px 0 1px #f0f0f0;
+          box-shadow: 5px 5px 0 1px #f0f0f0;
 }
 
 section .skills .skill .spring-io-32 {
@@ -411,9 +420,6 @@ body {
 
 .top-arrow {
   opacity: 0;
-  height: 7vh;
-  width: 7vh;
-  border-radius: 50%;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -424,25 +430,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 90px;
-  right: 15px;
-  -webkit-box-shadow: 0 0 10px 10px #1b1b1b;
-          box-shadow: 0 0 10px 10px #1b1b1b;
+  bottom: 80px;
+  right: 20px;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
-  color: #1b1b1b;
+  color: #2feba3;
 }
 
 .show-arrow {
-  opacity: 0.6;
-  -webkit-transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+  opacity: 1;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   cursor: pointer;
-  background: #2feba3;
 }
 
 .show-arrow:hover {
-  opacity: 1;
   color: #f0f0f0;
 }
 
