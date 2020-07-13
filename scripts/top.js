@@ -12,6 +12,7 @@ const getDocHeight = () => {
  
 var docheight = getDocHeight()
 
+// scroll amount in percentages
 let scrollAmount = () => {
     winHeight = window.innerHeight;
     docHeight = getDocHeight(); 
@@ -32,4 +33,4 @@ let showTopArrow = () => {
     })
 }
 
-export { showTopArrow };
+export { showTopArrow, scrollAmount };
