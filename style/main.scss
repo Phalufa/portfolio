@@ -48,28 +48,22 @@ body {
 
 .top-arrow {
 	opacity: 0;
-	height: 7vh;
-	width: 7vh;
-	border-radius: 50%;
 	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	bottom: 90px;
-	right: 15px;
-	box-shadow: 0 0 10px 10px $primary-color;
+	bottom: 80px;
+	right: 20px;
 	transition: opacity 0.3s ease-out;
-	color: $primary-color;
+	color: $decoration-color;
 }
 
 .show-arrow {
-	opacity: 0.6;
-	transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+	opacity: 1;
+	transition: color 0.3s ease-in-out;
 	cursor: pointer;
-	background: $decoration-color;
 
 	&:hover {
-		opacity: 1;
 		color: $font-color;
 	}
 }
