@@ -1,7 +1,7 @@
 import { animateFooter } from "./footer.js"
-import { showTopArrow } from "./top.js"
+import { showArrow } from "./arrow.js"
 
 window.addEventListener('scroll', (event) => {
-    animateFooter();    // display footer with animation
-    showTopArrow(); // display top navigation arrow
+    animateFooter();    // display footer with animations
+    showArrow(); // display navigate top arrow
 })
