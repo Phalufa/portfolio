@@ -1,4 +1,4 @@
-let winHeight, docHeight, scrollTop, trackLength, scrollPercentage;
+let winHeight, docHeight, scrollTop, trackLength;
 const arrowTop = document.getElementById("top-arrow");
 const D = document;
 
@@ -21,16 +21,23 @@ let scrollAmount = () => {
     return Math.floor(scrollTop / trackLength * 100)
 }
 
-let showTopArrow = () => {
+let showArrow = () => {
 
     if (scrollAmount() >= 30)
         arrowTop.classList.add("show-arrow");
     else
         arrowTop.classList.remove("show-arrow");
 
+    if (scrollAmount() == 100)
+        arrowTop.classList.add("arrow-position");
+    else {
+        arrowTop.style.transition = "0.4s linear";
+        arrowTop.classList.remove("arrow-position")
+    }
+
     arrowTop.addEventListener("click", () => {
         D.documentElement.scrollTop = 0;
     })
 }
 
-export { showTopArrow, scrollAmount };
+export { showArrow, scrollAmount };
