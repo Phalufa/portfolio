@@ -7,7 +7,7 @@
 	bottom: 50px;
 	right: 20px;
 	transition: opacity 0.3s ease-out;
-	color: $decoration-color;
+	color: var(--decoration-primary);
 }
 
 .show-arrow {
@@ -16,12 +16,12 @@
 	cursor: pointer;
 
 	&:hover {
-		color: $font-color;
+		color: var(--text);
 	}
 }
 
 .arrow-position {
-	color: $accent-color;
+	color: var(--bg-primary);
 	bottom: 15px;
 	transition: 0.6s linear;
 }

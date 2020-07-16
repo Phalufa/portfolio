@@ -3,13 +3,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #399773;
+	background: var(--decoration-accent);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #2feba3;
+	background: var(--decoration-primary);
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background: #2feba3;
+	background: var(--decoration-primary);
 }

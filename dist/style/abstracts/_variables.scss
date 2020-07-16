@@ -14,3 +14,12 @@ $decoration-color-hover: #399773;
 // fonts
 $font: 'Montserrat', sans-serif;
 $font-logo: 'Sacramento', cursive;
+
+// for light theme aka default theme
+:root {
+	--bg-primary: rgb(238, 238, 238);
+	--bg-accent: rgb(255, 255, 255);
+	--text: rgb(49, 49, 49);
+	--decoration-primary: #3d5af1;
+	--decoration-accent: rgb(3, 82, 172);
+}

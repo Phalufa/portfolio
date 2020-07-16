@@ -3,6 +3,7 @@ import { scrollAmount } from "./arrow.js"
 const footer = document.getElementById("footer");
 const icons = footer.querySelectorAll("i");
 const iconDesc = footer.querySelectorAll("span");
+const headings = document.getElementsByClassName("heading");
 
 let animateFooter = () => {
     if (scrollAmount() >= 45) {  // on #project section and below
@@ -11,7 +12,7 @@ let animateFooter = () => {
     } else
         footer.classList.remove("show-footer")  // hide footer
 
-    if (scrollAmount() == 100) {   // on #contact section and below
+    if (scrollAmount() >= 95) {   // on #contact section and below
         footer.classList.add("enlarge");    // enlarge footer
         for (let i = 0; i < icons.length; i++) {
             icons.item(i).style.transition = "0.4s linear";
