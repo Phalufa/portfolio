@@ -28,7 +28,7 @@ let showArrow = () => {
     else
         arrowTop.classList.remove("show-arrow");
 
-    if (scrollAmount() == 100)
+    if (scrollAmount() >= 95)
         arrowTop.classList.add("arrow-position");
     else {
         arrowTop.style.transition = "0.4s linear";

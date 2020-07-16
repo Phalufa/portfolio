@@ -8,9 +8,9 @@ section {
 		padding: 0;
 
 		.skill {
-			background: $accent-color;
+			background: var(--bg-primary);
 			list-style: none;
-			box-shadow: 5px 5px 0 1px $decoration-color;
+			box-shadow: 5px 5px 0 1px var(--decoration-primary);
 			width: 165px;
 			height: 58px;
 			cursor: default;
@@ -23,7 +23,7 @@ section {
 			align-items: center;
 
 			&:hover {
-				box-shadow: 5px 5px 0 1px $font-color;
+				box-shadow: 5px 5px 0 1px var(--text);
 			}
 
 			.spring-io-32 {

@@ -4,11 +4,10 @@
 
 	h2 {
 		display: block;
-		color: $font-color;
-		border-bottom: 4px solid $decoration-color;
+		color: var(--text);
+		border-bottom: 4px solid var(--decoration-primary);
 		width: 30%;
 		line-height: 1.8em;
-		animation: border-width 0.7s ease-in;
 	}
 
 	.rotate {
