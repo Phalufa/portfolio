@@ -284,6 +284,7 @@ footer .media li {
 }
 
 footer .media a {
+  cursor: pointer;
   color: var(--bg-accent);
   visibility: hidden;
 }
