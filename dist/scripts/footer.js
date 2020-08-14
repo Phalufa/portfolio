@@ -4,6 +4,7 @@ const footer = document.getElementById("footer");
 const icons = footer.querySelectorAll("i");
 const iconDesc = footer.querySelectorAll("span");
 const headings = document.getElementsByClassName("heading");
+const copyRight = document.getElementsByClassName("copyright")[0];
 
 let animateFooter = () => {
     if (scrollAmount() >= 45) {  // on #project section and below
@@ -14,6 +15,7 @@ let animateFooter = () => {
 
     if (scrollAmount() >= 95) {   // on #contact section and below
         footer.classList.add("enlarge");    // enlarge footer
+        copyRight.style.setProperty("visibility", "visible");
         for (let i = 0; i < icons.length; i++) {
             icons.item(i).style.transition = "0.4s linear";
             icons.item(i).classList.replace("fa-2x", "fa-4x");  // enlarge icons
@@ -22,6 +24,7 @@ let animateFooter = () => {
         }
     } else {
         footer.classList.remove("enlarge");
+        copyRight.style.setProperty("visibility", "hidden");
         for (let i = 0; i < icons.length; i++) {
             icons.item(i).classList.replace("fa-4x", "fa-2x");
             iconDesc.item(i).classList.remove("static");

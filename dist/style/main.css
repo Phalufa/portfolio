@@ -337,6 +337,18 @@ footer .media .info:hover span {
   visibility: visible !important;
 }
 
+.copyright {
+  position: absolute;
+  visibility: hidden;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  z-index: 99;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 section {
   width: 100%;
 }
@@ -548,7 +560,7 @@ input:checked + label:after {
 .heading .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  opacity: 0.05;
+  opacity: 0.15;
 }
 
 .heading .align-right {
