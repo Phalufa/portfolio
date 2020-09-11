@@ -1,4 +1,4 @@
-const CV = 'https://drive.google.com/file/d/1HQU11_befSFgslrFSUrTkbv0K6FxCSvM/view?usp=sharing'
+const CV = 'http://bit.ly/2GLrw3i'
 const cv = document.getElementById('cvlink')
 
 const openCV = () => {
