@@ -140,6 +140,11 @@ article ul li .image-coupon {
   background-size: cover;
 }
 
+article ul li .image-petbook {
+  background-image: url("../images/petbook-intro.png");
+  background-size: cover;
+}
+
 article ul li h3 {
   margin: 1em auto;
   border-bottom: 1px solid var(--decoration-primary);
