@@ -31,7 +31,7 @@ let animateFooter = () => {
         }
     } else {
         footer.classList.remove("enlarge");
-        copyRight.style.setProperty("visibility", "hidden");
+        copyright.style.setProperty("visibility", "hidden");
         for (let i = 0; i < icons.length; i++) {
             icons.item(i).classList.replace("fa-4x", "fa-2x");
             iconDesc.item(i).classList.remove("static");
