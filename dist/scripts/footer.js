@@ -4,7 +4,13 @@ const footer = document.getElementById("footer");
 const icons = footer.querySelectorAll("i");
 const iconDesc = footer.querySelectorAll("span");
 const headings = document.getElementsByClassName("heading");
-const copyRight = document.getElementsByClassName("copyright")[0];
+const copyright = document.getElementsByClassName("copyright")[0];
+const copySymbol = '\u00A9'
+
+const getYear = () => {
+    const date = new Date()
+    return date.getFullYear();
+}
 
 let animateFooter = () => {
     if (scrollAmount() >= 45) {  // on #project section and below
@@ -15,7 +21,8 @@ let animateFooter = () => {
 
     if (scrollAmount() >= 95) {   // on #contact section and below
         footer.classList.add("enlarge");    // enlarge footer
-        copyRight.style.setProperty("visibility", "visible");
+        copyright.style.setProperty("visibility", "visible");
+        copyright.textContent = `${copySymbol} Gal Chaimowicz ${getYear()}`   // copyright text line
         for (let i = 0; i < icons.length; i++) {
             icons.item(i).style.transition = "0.4s linear";
             icons.item(i).classList.replace("fa-2x", "fa-4x");  // enlarge icons
