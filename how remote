@@ -1,0 +1,180 @@
+[33mcommit ebb4ca605eb76ceca5c7ab33b8a03a37d279e3bf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Phalufa <gchaimowicz@gmail.com>
+Date:   Thu Feb 25 11:01:29 2021 +0200
+
+    npm cache solved
+
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex b4c4d11..7afc454 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -1,379 +1,379 @@[m
+ {[m
+[31m-  "name": "Portfolio",[m
+[31m-  "version": "1.0.0",[m
+[31m-  "lockfileVersion": 1,[m
+[31m-  "requires": true,[m
+[31m-  "dependencies": {[m
+[31m-    "array-union": {[m
+[31m-      "version": "1.0.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/array-union/-/array-union-1.0.2.tgz",[m
+[31m-      "integrity": "sha1-mjRBDk9OPaI96jdb5b5w8kd47Dk=",[m
+[31m-      "requires": {[m
+[31m-        "array-uniq": "^1.0.1"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "array-uniq": {[m
+[31m-      "version": "1.0.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/array-uniq/-/array-uniq-1.0.3.tgz",[m
+[31m-      "integrity": "sha1-r2rId6Jcx/dOBYiUdThY39sk/bY="[m
+[31m-    },[m
+[31m-    "async": {[m
+[31m-      "version": "2.6.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/async/-/async-2.6.3.tgz",[m
+[31m-      "integrity": "sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==",[m
+[31m-      "requires": {[m
+[31m-        "lodash": "^4.17.14"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "balanced-match": {[m
+[31m-      "version": "1.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",[m
+[31m-      "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c="[m
+[31m-    },[m
+[31m-    "brace-expansion": {[m
+[31m-      "version": "1.1.11",[m
+[31m-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",[m
+[31m-      "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",[m
+[31m-      "requires": {[m
+[31m-        "balanced-match": "^1.0.0",[m
+[31m-        "concat-map": "0.0.1"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "commander": {[m
+[31m-      "version": "2.20.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",[m
+[31m-      "integrity": "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="[m
+[31m-    },[m
+[31m-    "commondir": {[m
+[31m-      "version": "1.0.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz",[m
+[31m-      "integrity": "sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs="[m
+[31m-    },[m
+[31m-    "concat-map": {[m
+[31m-      "version": "0.0.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",[m
+[31m-      "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s="[m
+[31m-    },[m
+[31m-    "email-addresses": {[m
+[31m-      "version": "3.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/email-addresses/-/email-addresses-3.1.0.tgz",[m
+[31m-      "integrity": "sha512-k0/r7GrWVL32kZlGwfPNgB2Y/mMXVTq/decgLczm/j34whdaspNrZO8CnXPf1laaHxI6ptUlsnAxN+UAPw+fzg=="[m
+[31m-    },[m
+[31m-    "escape-string-regexp": {[m
+[31m-      "version": "1.0.5",[m
+[31m-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",[m
+[31m-      "integrity": "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="[m
+[31m-    },[m
+[31m-    "filename-reserved-regex": {[m
+[31m-      "version": "1.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/filename-reserved-regex/-/filename-reserved-regex-1.0.0.tgz",[m
+[31m-      "integrity": "sha1-5hz4BfDeHJhFZ9A4bcXfUO5a9+Q="[m
+[31m-    },[m
+[31m-    "filenamify": {[m
+[31m-      "version": "1.2.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/filenamify/-/filenamify-1.2.1.tgz",[m
+[31m-      "integrity": "sha1-qfL/0RxQO+0wABUCknI3jx8TZaU=",[m
+[31m-      "requires": {[m
+[31m-        "filename-reserved-regex": "^1.0.0",[m
+[31m-        "strip-outer": "^1.0.0",[m
+[31m-        "trim-repeated": "^1.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "filenamify-url": {[m
+[31m-      "version": "1.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/filenamify-url/-/filenamify-url-1.0.0.tgz",[m
+[31m-      "integrity": "sha1-syvYExnvWGO3MHi+1Q9GpPeXX1A=",[m
+[31m-      "requires": {[m
+[31m-        "filenamify": "^1.0.0",[m
+[31m-        "humanize-url": "^1.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "find-cache-dir": {[m
+[31m-      "version": "3.3.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.3.1.tgz",[m
+[31m-      "integrity": "sha512-t2GDMt3oGC/v+BMwzmllWDuJF/xcDtE5j/fCGbqDD7OLuJkj0cfh1YSA5VKPvwMeLFLNDBkwOKZ2X85jGLVftQ==",[m
+[31m-      "requires": {[m
+[31m-        "commondir": "^1.0.1",[m
+[31m-        "make-dir": "^3.0.2",[m
+[31m-        "pkg-dir": "^4.1.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "find-up": {[m
+[31m-      "version": "4.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz",[m
+[31m-      "integrity": "sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==",[m
+[31m-      "requires": {[m
+[31m-        "locate-path": "^5.0.0",[m
+[31m-        "path-exists": "^4.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "fs-extra": {[m
+[31m-      "version": "8.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz",[m
+[31m-      "integrity": "sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==",[m
+[31m-      "requires": {[m
+[31m-        "graceful-fs": "^4.2.0",[m
+[31m-        "jsonfile": "^4.0.0",[m
+[31m-        "universalify": "^0.1.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "fs.realpath": {[m
+[31m-      "version": "1.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",[m
+[31m-      "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="[m
+[31m-    },[m
+[31m-    "gh-pages": {[m
+[31m-      "version": "3.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/gh-pages/-/gh-pages-3.1.0.tgz",[m
+[31m-      "integrity": "sha512-3b1rly9kuf3/dXsT8+ZxP0UhNLOo1CItj+3e31yUVcaph/yDsJ9RzD7JOw5o5zpBTJVQLlJAASNkUfepi9fe2w==",[m
+[31m-      "requires": {[m
+[31m-        "async": "^2.6.1",[m
+[31m-        "commander": "^2.18.0",[m
+[31m-        "email-addresses": "^3.0.1",[m
+[31m-        "filenamify-url": "^1.0.0",[m
+[31m-        "find-cache-dir": "^3.3.1",[m
+[31m-        "fs-extra": "^8.1.0",[m
+[31m-        "globby": "^6.1.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "glob": {[m
+[31m-      "version": "7.1.6",[m
+[31m-      "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",[m
+[31m-      "integrity": "sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==",[m
+[31m-      "requires": {[m
+[31m-        "fs.realpath": "^1.0.0",[m
+[31m-        "inflight": "^1.0.4",[m
+[31m-        "inherits": "2",[m
+[31m-        "minimatch": "^3.0.4",[m
+[31m-        "once": "^1.3.0",[m
+[31m-        "path-is-absolute": "^1.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "globby": {[m
+[31m-      "version": "6.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/globby/-/globby-6.1.0.tgz",[m
+[31m-      "integrity": "sha1-9abXDoOV4hyFj7BInWTfAkJNUGw=",[m
+[31m-      "requires": {[m
+[31m-        "array-union": "^1.0.1",[m
+[31m-        "glob": "^7.0.3",[m
+[31m-        "object-assign": "^4.0.1",[m
+[31m-        "pify": "^2.0.0",[m
+[31m-        "pinkie-promise": "^2.0.0"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "graceful-fs": {[m
+[31m-      "version": "4.2.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.4.tgz",[m
+[31m-      "integrity": "sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw=="[m
+[31m-    },[m
+[31m-    "humanize-url":
