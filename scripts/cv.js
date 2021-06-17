@@ -1,4 +1,4 @@
-const CV = 'http://bit.ly/30Rt6Yi'
+const CV = 'https://bit.ly/3wBbjmj'
 const cv = document.getElementById('cvlink')
 
 const openCV = () => {
